@@ -30,9 +30,9 @@ Route::get('/tasks/create', [TaskController::class . 'create'])->name('tasks.cre
 Route::post('/tasks', [TaskController::class .'store'])->name('tasks.store');
 // returns a page that shows a full task
 Route::get('/tasks/{task}', [TaskController::class .'show'])->name('tasks.show');
-// returns the form for editing a post
-Route::get('/tasks/{task}/edit', [TaskController::class .'edit'])->name('posts.edit');
-// updates a post
-Route::put('/posts/{post}', [TaskController::class .'update'])->name('posts.update');
-// deletes a post
-Route::delete('/posts/{post}', [TaskController::class .'destroy'])->name('posts.destroy');
+// returns the form for editing a task
+Route::get('/tasks/{task}/edit', [TaskController::class .'edit'])->name('tasks.edit');
+// updates a task
+Route::put('/tasks/{task}', [TaskController::class .'update'])->name('tasks.update');
+// deletes a task
+Route::delete('/tasks/{task}', [TaskController::class .'destroy'])->name('tasks.destroy');
